@@ -1,0 +1,30 @@
+<div class="data">
+    <div class="row">
+        <div class="col-12 text-center">
+            <h3>All Posts</h3>
+        </div>
+    </div>
+    <div class="row">
+        <div class="container">
+            <div class="table-container">
+                <table class="table table-striped table-bordered table-hover">
+                    <thead>
+                        <tr>
+                            <th>Id</th>
+                            <th>user Id</th>
+                            <th>Title</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        <tr *ngFor="let post of posts; let i = index">
+                            <th scope="row">{{post.id}}</th>
+                            <td>{{post.userId}}</td>
+                            <td><a [routerLink]="['edit/' + post.id]">{{post.title}}</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,18 @@
+.data {
+    overflow: hidden;
+    margin-top: 4%;
+}
+
+.data .table-container {
+    height: 400px;
+    overflow-y: auto;
+
+}
+
+.data h3 {
+    margin-bottom: 30px;
+}
+
+.data table button {
+    margin: 0px 4px;
+}

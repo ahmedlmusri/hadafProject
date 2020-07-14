@@ -1,0 +1,50 @@
+<div class="data">
+    <h3 class="text-center">Edit Post</h3>
+
+    <div class="row">
+        <div class="container">
+            <form #addpost="ngForm" (ngSubmit)="submitData(addpost)">
+
+                <div class="form-group  row">
+                    <label for="Campagin" class="col-2 col-form-label">
+                        Title
+                        <span class="text-danger"> *</span>
+                    </label>
+
+                    <div class="col-10">
+                        <input type="text" class="form-control" required name="title" [(ngModel)]="dataObj.title"
+                            #title="ngModel">
+                        <small *ngIf="!title.valid && title.touched" class="text-danger">
+                            message Missing Required
+                        </small>
+                    </div>
+
+                </div>
+
+
+                <div class="form-group row">
+                    <label for="Campagin" class="col-2 col-form-label">
+                        body
+                        <span class="text-danger"> *</span>
+                    </label>
+
+                    <div class="col-10">
+                        <textarea type="text" class="form-control" name="body" [(ngModel)]="dataObj.body"
+                            #body="ngModel" required></textarea>
+                        <small *ngIf="!body.valid && body.touched" class="text-danger">
+                            message Missing Required
+                        </small>
+                    </div>
+
+                </div>
+                <div class="alert alert-success" *ngIf="isAlertMessage" role="alert">
+                    {{message}}
+                </div>
+                <div class="form-group m-t-40 row">
+                    <button class="btn btn-success" [disabled]="!addpost.valid" type="submit">Edit</button>
+                    <button class="btn btn-danger" type="button" (click)="deletePost(id)">Delete</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,19 @@
+.data {
+    overflow: hidden;
+}
+
+form button {
+    margin: 0px 5px;
+}
+
+form {
+    margin-top: 8%;
+}
+
+h3 {
+    margin: 10px 0px;
+}
+
+textarea {
+    height: 154px;
+}
